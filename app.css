@@ -1,0 +1,1279 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+
+:root{
+    /* colors */
+    --clr-white: #FFFFFF;
+    --clr-black: rgba(41, 45, 51, 1);
+    --clr-primary: rgba(24, 92, 255, 1);
+    --clr-secondary: rgba(240, 249, 255, 1);
+    --clr-tetiary: rgba(148, 151, 161, 1);
+    --clr-background-one: rgba(241, 246, 250, 1);
+    --clr-error: rgba(193, 64, 64, 1);
+    --clr-helperblue: rgba(201, 220, 236, 1);
+
+    /* Fonts */
+    --ff-heading: 'Manrope';
+    --ff-content: 'Open Sans'
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 16px;
+    background-color: var(--clr-white);
+}
+
+/* The design of the hero section starts from here */
+/* the header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+#logo2, .follow{
+    display: none;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+li a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: var(--clr-tetiary);
+    font-family: var(--ff-heading);
+}
+
+li a:hover{
+    color: var(--clr-black);
+    transition: 0.3s;
+}
+
+li a:focus{
+    color: var(--clr-black);
+}
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn{
+    background-color: var(--clr-white);
+    border: none;
+    color: var(--clr-tetiary);
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown:hover .dropbtn{
+    color: var(--clr-black);
+    transition: 0.3s;
+    opacity: 20;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: var(--clr-primary);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: var(--clr-white);
+    text-decoration: none;
+    padding: .2rem 2rem;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-primary);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: 0.3s;
+  }
+
+.header button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: var(--clr-white);
+    font-family: var(--ff-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: var(--clr-primary);
+    border: none;
+    padding: .5rem .5rem;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#menu{
+    font-size: 2rem;
+    font-weight: 700;
+    /* color: var(--clr-primary); */
+    display: none;
+    cursor: pointer;
+}
+
+#close{
+    font-size: 2rem;
+    color: var(--clr-white);
+    display: none;
+    cursor: pointer;
+}
+
+/* The hero section head and text */
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 2rem 5rem;
+    gap: 1rem;
+}
+
+.head img{
+    width: 60%;
+}
+
+.title h1{
+    font-size: 2.6rem;
+    font-weight: 800;
+    font-family: var(--ff-heading);
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    margin-bottom: 1rem;
+}
+
+.title p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 165%;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    margin-bottom: 1rem;
+}
+
+.btn{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.title button{
+    padding: .5rem 2rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    font-family: var(--ff-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.18);
+    border-radius: 6px;
+}
+
+.title button:hover, .header button:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.title .demo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    color: var(--clr-black);
+    font-family: var(--ff-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: var(--clr-white);
+    border: none;
+    padding: .5rem .5rem;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.demo:hover{
+    color: var(--clr-tetiary);
+    transition: 0.3s;
+}
+
+/* The styling of the clients section */
+.clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This is the styling of the advantages section */
+.advantages-section{
+    background-color: var(--clr-background-one);
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.advantages-section h1{
+    text-align: center;
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    margin-bottom: 1rem;
+}
+
+.advantages-section > p{
+    text-align: center;
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    margin-bottom: 2rem;
+}
+
+.advantages-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card{
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 30px;
+    border-radius: 6px;
+    box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
+}
+
+.card h2{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+}
+
+.card p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+}
+
+/* This is the styling of the faetures section */
+.features-section{
+    padding: 5rem 2rem;
+}
+
+.block1, .block2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.block1 img, .block2 img{
+    width: 50%;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.description h1{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+}
+
+.description p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+}
+
+.description button{
+    padding: .5rem 2rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    font-family: var(--ff-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.18);
+    border-radius: 6px;
+}
+
+.description button:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.block1 .description{
+    padding-left: 5rem;
+}
+.block2 .description{
+    padding-right: 5rem;
+}
+
+/* This is the styling of the blog section */
+.blog-section{
+    padding: 5rem 1rem;
+    background-color: var(--clr-secondary);
+}
+
+.blog-section h1{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    padding-bottom: 2rem;
+}
+
+.blog-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card1, .card2, .card3{
+    background-color: var(--clr-white);
+    padding: 2rem 1.5rem;
+    box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
+    border-radius: 6px;
+}
+
+#date{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .7rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    margin-bottom: 1rem;
+}
+
+.card1 h2, .card2 h2, .card3 h2{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    margin-bottom: 1rem;
+}
+
+.card1 p, .card2 p, .card3 p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    margin-bottom: .5rem;
+}
+
+.card1 span, .card2 span, .card3 span{
+    padding: .3rem .7rem;
+    border: 1px solid #F1F6FA;
+    border-radius: 6px;
+    font-size: .7rem;
+    color: var(--clr-primary);
+    font-family: var(--ff-heading);
+    font-weight: 800;
+}
+
+.learn-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.blog-section button{
+    padding: .5rem 2rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    font-family: var(--ff-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.18);
+    border-radius: 6px;
+}
+
+.blog-section button:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/* The styling of the review part starts from here */
+.review-section{
+    padding: 5rem 1rem;
+}
+
+.title-direction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+}
+
+.title-direction h1{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+}
+
+.direction{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.direction .material-symbols-outlined{
+    padding: .3rem 1.5rem;
+    background-color: var(--clr-secondary);
+    border-radius: 10px;
+}
+
+#back{
+    opacity: 0.6;
+}
+
+.reviews-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+fieldset{
+    border: none;
+    box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);
+    border-radius: 6px;
+    padding: 2rem 1.5rem;
+}
+
+fieldset p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    margin-bottom: 1rem;
+}
+
+fieldset #name{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: .9rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    margin-bottom: .2rem;
+}
+
+fieldset .position{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+}
+
+/* The overview section styling starts from here */
+.overview-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-primary);
+    padding: 2rem 1rem;
+    gap: 3rem;
+    text-align: center;
+    color: var(--clr-white);
+}
+
+.project h1{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.project p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 700;
+    font-size: .9rem;
+    line-height: 28px;
+}
+
+.separator{
+    width: .1rem;
+    background-color: var(--clr-background-one);
+    opacity: 0.2;
+    padding: 2.5rem 0;
+}
+
+/* The styling for the contact us section */
+.contact-us-section{
+    padding: 5rem 2rem;
+    background-color: var(--clr-background-one);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+
+.box1 h2{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    margin-bottom: 1rem;
+}
+
+.box1 > p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    margin-bottom: 3rem;
+}
+
+.contact p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .9rem;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+}
+
+.contact .info{
+    color: var(--clr-black);
+    margin-bottom: 1rem;
+}
+
+.form{
+    background-color: var(--clr-white);
+    padding: 2rem 1.5rem;
+    width: 25%;
+    box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
+    border-radius: 6px;
+}
+
+.form p{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.3rem;
+    line-height: 40px;
+    letter-spacing: -0.015em;  
+    color: var(--clr-black); 
+    margin-bottom: 1rem; 
+}
+
+.form input{
+    width: 100%;
+    margin-bottom: 1rem;
+    border: none;
+    outline: none;
+    background-color: var(--clr-white);
+    border-bottom: 1px solid var(--clr-tetiary);
+}
+
+.form label{
+    color: var(--clr-tetiary);
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: .7rem;
+    line-height: 24px;
+}
+
+.form input[type=submit]{
+    width: 20;
+    float: right;
+    background-color: var(--clr-primary);
+    border: none;
+    color: var(--clr-white);
+    padding: .5rem ;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form input[type=submit]:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/* This is the styling for the news section */
+.subscribe-section{
+    background-color: var(--clr-primary);
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.news h2{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 56px;
+    letter-spacing: -0.015em;
+    color: var(--clr-white);
+}
+
+.news p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: var(--clr-white);
+}
+
+.text-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-field input[type=email]{
+    width: 15rem;
+    height: 2rem;
+    border-radius: 6px 0 0 6px;
+    background-color: var(--clr-helperblue);
+    border: none;
+    padding: 1rem;
+    outline: none;
+}
+
+.text-field input[type=submit]{
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    background-color: var(--clr-white);
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    color: var(--clr-black);
+    font-family: var(--ff-heading);
+    font-weight: 700;
+}
+
+/* The styling of the footer section */
+.footer{
+    padding: 3rem 5rem;
+    background-color: var(--clr-background-one);
+}
+
+.first-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--clr-helperblue);
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    align-items: flex-start;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about p{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 24px;
+    color: var(--clr-black);
+}
+
+.about a{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+}
+
+.about a:hover{
+    opacity: 0.7;
+}
+
+.second-section{
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--clr-helperblue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.phone-email .p-head{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    margin-bottom: .5rem;
+}
+
+.phone-email p, .address-direction p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: #292D33;
+}
+
+.phone-email p > a, .address-direction p > a{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 600;
+    font-size: .8rem;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    letter-spacing: -0.01em;
+    color: var(--clr-black);
+}
+
+.phone-email p > a:hover, .address-direction p > a:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.socials p{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 24px;
+    color: var(--clr-black);
+    margin-bottom: .5rem;
+}
+
+.accounts{
+    display: flex;
+    gap: 1rem;
+}
+
+.accounts a{
+    color: var(--clr-primary);
+    font-size: 1.2rem;
+}
+
+.accounts a:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.third-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.privacy-terms{
+    display: flex;
+    gap: 3rem;
+}
+
+.privacy-terms a{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 600;
+    font-size: .8rem;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: var(--clr-tetiary);
+}
+
+.third-section p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;   
+    color: var(--clr-tetiary);    
+}
+
+
+/* The respomsive styling */
+
+@media (max-width: 1114px) {
+    .header{
+        padding: 1rem 1rem;
+    }
+    ul{
+        gap: 1rem;
+    }
+    .head{
+        padding: 2rem 2rem 2rem 2rem;
+    }
+    .advantages-card{
+        flex-wrap: wrap;
+    }
+    .block1 .description{
+        padding-left: 1rem;
+    }
+    .block2 .description{
+        padding-right: 1rem;
+    }
+    .blog-cards{
+        flex-wrap: wrap;
+    }
+    .title-direction{
+        padding: 0 3rem;
+    }
+    .form{
+        width: 50%;
+    }
+
+    .clients{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px){
+    .navs{
+        /* display: none; */
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        background-color: var(--clr-primary);
+        flex-direction: column;
+        color: var(--clr-white);
+        padding: 1.5rem 1rem;
+        transform: translateY(-100%);
+        transition: 1s;
+    }
+
+    ul{
+        flex-direction: column;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    li{
+        width: 100%;
+        border-bottom: 1px solid var(--clr-helperblue);
+        padding-bottom: .3rem;
+    }
+
+    li a{
+        color: var(--clr-white);
+        width: 10%;
+        font-size: .9rem;
+        padding-bottom: .3rem;
+        text-align: center;
+    }
+
+    .dropdown .dropbtn{
+        background-color: var(--clr-primary);
+        border: none;
+        color: var(--clr-white);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        padding-right: 5rem;
+    }
+
+    .dropdown-content {
+        width: 100%;
+    }
+
+    .dropdown-content a{
+       width: 100%; 
+       text-align: left;
+    }
+
+    .open .navs{
+        transform: translateX(0);
+    }
+
+    #logo2{
+        display: block;
+    }
+
+    .header > a{
+        display: none;
+    }
+
+    .harmburger{
+        z-index: 20;
+    }
+
+    .follow{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    #menu{
+        display: block;
+        color: var(--clr-primary);
+    }
+
+    #close{
+        display: none;
+    }
+
+    .open #menu{
+        display: none;
+    }
+
+    .open #close{
+        display: block;
+    }
+
+    .accounts1{
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .accounts1 a{
+        color: var(--clr-white);
+        font-size: 1.2rem;
+    }
+    
+    .accounts a:hover{
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+
+    .follow p{
+        font-family: var(--ff-heading);
+        font-weight: 600;
+        font-size: .8rem;
+    }
+
+    .advantages-section h1,
+    .title h1,
+    .advantages-section h1,
+    .description h1,
+    .blog-section h1,
+    .title-direction h1,
+    .project h1{
+        font-size: 2rem;
+    }
+
+    .overview-section{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .separator{
+        display: none;
+    }
+
+    .project{
+        border-bottom: 1px solid var(--clr-background-one);
+        width: 80%;
+        padding-bottom: 1rem;
+    }
+
+    #pr1{
+        border-bottom: none;
+    }
+
+    .footer{
+        padding: 2rem 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .head,
+    .block1,
+    .block2,
+    .reviews-cards,
+    .contact-us-section,
+    .subscribe-section,
+    .first-section,
+    .second-section,
+    .third-section{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .block1{
+        flex-direction: column-reverse;
+    }
+
+    .block2{
+        margin-top: 2rem;
+    }
+
+    .footer{
+        padding: 2rem 1rem;
+    }
+
+    .head img,
+    .block1 img,
+    .block2 img{
+        width: 100%;
+    }
+
+    .form{
+        width: 100%;
+    }
+
+    .advantages-section h1,
+    .title h1,
+    .advantages-section h1,
+    .description h1,
+    .blog-section h1,
+    .title-direction h1,
+    .project h1{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+
+    .clients{
+        flex-wrap: wrap;
+    }
+
+    .head{
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .btn{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn button, 
+    .btn a,
+    .description button{
+        width: 100%;
+    }
+
+    .btn .demo{
+        border: 1px solid var(--clr-primary);
+        color: var(--clr-primary);
+    }
+
+    .title p, 
+    .advantages-section p,
+    .description p,
+    .project p,
+    .card1 p, .card2 p, .card3 p,
+    fieldset p,
+    .box1 p,
+    .news p{
+        font-size: .85rem;
+        line-height: 24px;
+    }
+
+    .card h2,
+    .box1 h2,
+    .news h2{
+        font-size: 1.2rem;
+        line-height: 25px;
+    }
+
+    .features-section{
+        padding: 5rem 1rem;
+    }
+
+    .title-direction{
+        padding: 0 1rem;
+    }
+
+    .subscribe-section{
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .first-section,
+    .second-section,
+    .third-section{
+        width: 100%;
+        gap: 2rem;
+        justify-content: flex-start;
+    }
+
+    .links{
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .first-section img{
+        width: 30%;
+    }
+
+    .blog-section button,
+    .card1, .card2, .card3,
+    .learn-more a{
+        width: 100%;
+    }
+
+    .learn-more a{
+        width: 100%;
+    }
+
+    .block1 .description{
+        padding-left: 0;
+    }
+    .block2 .description{
+        padding-right: 0;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .advantages-card{
+        padding: 1rem;
+    }
+
+    .contact-us-section{
+        padding: 2rem 1rem;
+    }
+
+    .direction .material-symbols-outlined{
+        padding: .3rem 1rem;
+    } 
+
+
+    .text-field{
+        width: 100%;
+    }
+    
+    .text-field input[type=email]{
+        width: 70%;
+    }
+    
+    .text-field input[type=submit]{
+        width: 30%;
+    }
+
+    .clients img{
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 400px){
+    .links{
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .contact-info{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
