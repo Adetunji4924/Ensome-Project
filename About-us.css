@@ -31,6 +31,9 @@ html{
 
 /* The design of the hero section starts from here */
 /* the header */
+.hero-section{
+    background-color: var(--clr-background-one);
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -74,7 +77,7 @@ li a:focus{
 }
 
 .dropdown .dropbtn{
-    background-color: var(--clr-white);
+    background-color: var(--clr-background-one);
     border: none;
     color: var(--clr-tetiary);
     margin: 0;
@@ -128,6 +131,7 @@ li a:focus{
     padding: .5rem .5rem;
     cursor: pointer;
     border-radius: 6px;
+    margin-right: 0;
 }
 
 #menu{
@@ -149,180 +153,59 @@ li a:focus{
     display: none;
 }
 
-/* The hero section head and text */
+/* The head part of the hero section */
 .head{
-    display: flex;
-    justify-content: space-between;
+    padding: 5rem 2rem;
+    justify-content: center;
     align-items: center;
-    padding: 2rem 2rem 2rem 5rem;
-    gap: 1rem;
-}
-
-.head img{
-    width: 60%;
+    display: flex;
+    flex-direction: column;
 }
 
 .title h1{
-    font-size: 2.6rem;
-    font-weight: 800;
-    font-family: var(--ff-heading);
-    letter-spacing: -0.015em;
-    color: var(--clr-black);
-    margin-bottom: 1rem;
-}
-
-.title p{
-    font-family: var(--ff-content);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 165%;
-    letter-spacing: -0.015em;
-    color: var(--clr-tetiary);
-    margin-bottom: 1rem;
-}
-
-.btn{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.title button{
-    padding: .5rem 2rem;
-    background-color: var(--clr-primary);
-    color: var(--clr-white);
-    font-family: var(--ff-heading);
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.18);
-    border-radius: 6px;
-}
-
-.title button:hover, .header button:hover{
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-.title .demo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .2rem;
-    color: var(--clr-black);
-    font-family: var(--ff-heading);
-    font-size: 0.8rem;
-    font-weight: 600;
-    background-color: var(--clr-white);
-    border: none;
-    padding: .5rem .5rem;
-    cursor: pointer;
-    box-shadow: none;
-}
-
-.demo:hover{
-    color: var(--clr-tetiary);
-    transition: 0.3s;
-}
-
-/* The styling of the clients section */
-.clients{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* This is the styling of the advantages section */
-.advantages-section{
-    background-color: var(--clr-background-one);
-    padding: 5rem 0;
-    overflow: hidden;
-}
-
-.advantages-section h1{
-    text-align: center;
     font-family: var(--ff-heading);
     font-style: normal;
     font-weight: 800;
     font-size: 2.6rem;
     line-height: 60px;
-    letter-spacing: -0.015em;
-    margin-bottom: 1rem;
-}
-
-.advantages-section > p{
-    text-align: center;
-    font-family: var(--ff-content);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 25px;
     text-align: center;
     letter-spacing: -0.015em;
-    color: var(--clr-tetiary);
-    margin-bottom: 2rem;
 }
 
-.advantages-card{
+.segment{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: .5rem;
 }
 
-.card{
-    background-color: var(--clr-white);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 1.5rem;
-    gap: 30px;
-    border-radius: 6px;
-    box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
-}
-
-.card h2{
+.segment .home, .segment p{
     font-family: var(--ff-heading);
     font-style: normal;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 33px;
-    letter-spacing: -0.015em;
-    color: var(--clr-black);
-}
-
-.card p{
-    font-family: var(--ff-content);
-    font-style: normal;
-    font-weight: 400;
-    font-size: .9rem;
-    line-height: 28px;
-    letter-spacing: -0.015em;
+    font-weight: 500;
+    font-size: .8rem;
+    line-height: 24px;
     color: var(--clr-tetiary);
 }
 
-/* This is the styling of the faetures section */
-.features-section{
-    padding: 5rem 2rem;
+.segment p{
+    color: var(--clr-black);
+    font-weight: 600;
 }
 
-.block1, .block2{
+.line{
+    height: 1rem;
+    width: .1rem;
+    background-color: var(--clr-tetiary);
+}
+
+/* This is the styling of the who we are section */
+.who-we-are-section, .our-mission-section{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding: 3rem 1rem;
     gap: 2rem;
-}
-
-.block1 img, .block2 img{
-    width: 50%;
-}
-
-.description{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
 }
 
 .description h1{
@@ -339,253 +222,12 @@ li a:focus{
     font-family: var(--ff-content);
     font-style: normal;
     font-weight: 400;
-    font-size: .9rem;
+    font-size: 1rem;
     line-height: 33px;
     letter-spacing: -0.015em;
     color: var(--clr-tetiary);
 }
 
-.description button{
-    padding: .5rem 2rem;
-    background-color: var(--clr-primary);
-    color: var(--clr-white);
-    font-family: var(--ff-heading);
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.18);
-    border-radius: 6px;
-}
-
-.description button:hover{
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-.block1 .description{
-    padding-left: 5rem;
-}
-.block2 .description{
-    padding-right: 5rem;
-}
-
-/* This is the styling of the blog section */
-.blog-section{
-    padding: 5rem 1rem;
-    background-color: var(--clr-secondary);
-}
-
-.blog-section h1{
-    font-family: var(--ff-heading);
-    font-style: normal;
-    font-weight: 800;
-    font-size: 2.6rem;
-    line-height: 60px;
-    text-align: center;
-    letter-spacing: -0.015em;
-    padding-bottom: 2rem;
-}
-
-.blog-cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.card1, .card2, .card3{
-    background-color: var(--clr-white);
-    padding: 2rem 1.5rem;
-    box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
-    border-radius: 6px;
-}
-
-#date{
-    font-family: var(--ff-content);
-    font-style: normal;
-    font-weight: 400;
-    font-size: .7rem;
-    line-height: 24px;
-    letter-spacing: -0.015em;
-    color: var(--clr-tetiary);
-    margin-bottom: 1rem;
-}
-
-.card1 h2, .card2 h2, .card3 h2{
-    font-family: var(--ff-heading);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.3rem;
-    line-height: 33px;
-    letter-spacing: -0.015em;
-    color: var(--clr-black);
-    margin-bottom: 1rem;
-}
-
-.card1 p, .card2 p, .card3 p{
-    font-family: var(--ff-content);
-    font-style: normal;
-    font-weight: 400;
-    font-size: .9rem;
-    line-height: 28px;
-    letter-spacing: -0.015em;
-    color: var(--clr-tetiary);
-    margin-bottom: .5rem;
-}
-
-.card1 span, .card2 span, .card3 span{
-    padding: .3rem .7rem;
-    border: 1px solid #F1F6FA;
-    border-radius: 6px;
-    font-size: .7rem;
-    color: var(--clr-primary);
-    font-family: var(--ff-heading);
-    font-weight: 800;
-}
-
-.learn-more{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-}
-
-.blog-section button{
-    padding: .5rem 2rem;
-    background-color: var(--clr-primary);
-    color: var(--clr-white);
-    font-family: var(--ff-heading);
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.18);
-    border-radius: 6px;
-}
-
-.blog-section button:hover{
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-/* The styling of the review part starts from here */
-.review-section{
-    padding: 5rem 1rem;
-}
-
-.title-direction{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10rem;
-}
-
-.title-direction h1{
-    font-family: var(--ff-heading);
-    font-style: normal;
-    font-weight: 800;
-    font-size: 2.6rem;
-    line-height: 60px;
-    letter-spacing: -0.015em;
-    color: var(--clr-black);
-}
-
-.direction{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.direction .material-symbols-outlined{
-    padding: .3rem 1.5rem;
-    background-color: var(--clr-secondary);
-    border-radius: 10px;
-}
-
-#back{
-    opacity: 0.6;
-}
-
-.reviews-cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-fieldset{
-    border: none;
-    box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);
-    border-radius: 6px;
-    padding: 2rem 1.5rem;
-}
-
-fieldset p{
-    font-family: var(--ff-content);
-    font-style: normal;
-    font-weight: 400;
-    font-size: .9rem;
-    line-height: 28px;
-    letter-spacing: -0.015em;
-    color: var(--clr-tetiary);
-    margin-bottom: 1rem;
-}
-
-fieldset #name{
-    font-family: var(--ff-heading);
-    font-style: normal;
-    font-weight: 700;
-    font-size: .9rem;
-    line-height: 24px;
-    letter-spacing: -0.015em;
-    color: var(--clr-black);
-    margin-bottom: .2rem;
-}
-
-fieldset .position{
-    font-family: var(--ff-content);
-    font-style: normal;
-    font-weight: 400;
-    font-size: .8rem;
-    line-height: 24px;
-    letter-spacing: -0.015em;
-}
-
-/* The overview section styling starts from here */
-.overview-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--clr-primary);
-    padding: 2rem 1rem;
-    gap: 3rem;
-    text-align: center;
-    color: var(--clr-white);
-}
-
-.project h1{
-    font-family: var(--ff-content);
-    font-style: normal;
-    font-weight: 800;
-    font-size: 3rem;
-}
-
-.project p{
-    font-family: var(--ff-content);
-    font-style: normal;
-    font-weight: 700;
-    font-size: .9rem;
-    line-height: 28px;
-}
-
-.separator{
-    width: .1rem;
-    background-color: var(--clr-background-one);
-    opacity: 0.2;
-    padding: 2.5rem 0;
-}
 
 /* The styling for the contact us section */
 .contact-us-section{
@@ -907,8 +549,7 @@ fieldset .position{
 }
 
 
-/* The respomsive styling */
-
+/* The responsiveness */
 @media (max-width: 1114px) {
     .header{
         padding: 1rem 1rem;
@@ -916,30 +557,19 @@ fieldset .position{
     ul{
         gap: 1rem;
     }
-    .head{
-        padding: 2rem 2rem 2rem 2rem;
-    }
-    .advantages-card{
+
+    .who-we-are-section, .our-mission-section{
         flex-wrap: wrap;
-    }
-    .block1 .description{
-        padding-left: 1rem;
-    }
-    .block2 .description{
-        padding-right: 1rem;
-    }
-    .blog-cards{
-        flex-wrap: wrap;
-    }
-    .title-direction{
-        padding: 0 3rem;
-    }
-    .form{
-        width: 50%;
     }
 
-    .clients{
-        flex-wrap: wrap;
+    .who-we-are-section{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 900px){
+    .services-section{
+        grid-template-columns: auto auto;
     }
 }
 
@@ -1061,12 +691,6 @@ fieldset .position{
         font-size: .8rem;
     }
 
-    .advantages-section h1,
-    .title h1,
-    .advantages-section h1,
-    .description h1,
-    .blog-section h1,
-    .title-direction h1,
     .project h1{
         font-size: 2rem;
     }
@@ -1090,16 +714,26 @@ fieldset .position{
         border-bottom: none;
     }
 
+    .who-we-are-section img, .our-mission-section img {
+        width: 100%;
+    }
+
+    .description h1, .description p{
+        text-align: center;
+    }
+
+
+
     .footer{
         padding: 2rem 2rem;
     }
 }
 
 @media (max-width: 600px) {
-    .head,
-    .block1,
-    .block2,
-    .reviews-cards,
+    .services-section{
+        grid-template-columns: auto;
+    }
+
     .contact-us-section,
     .subscribe-section,
     .first-section,
@@ -1109,90 +743,29 @@ fieldset .position{
         justify-content: center;
     }
 
-    .block1{
-        flex-direction: column-reverse;
-    }
-
-    .block2{
-        margin-top: 2rem;
-    }
-
     .footer{
         padding: 2rem 1rem;
-    }
-
-    .head img,
-    .block1 img,
-    .block2 img{
-        width: 100%;
     }
 
     .form{
         width: 100%;
     }
 
-    .advantages-section h1,
-    .title h1,
-    .advantages-section h1,
-    .description h1,
-    .blog-section h1,
-    .title-direction h1,
     .project h1{
         font-size: 1.5rem;
         line-height: 30px;
     }
 
-    .clients{
-        flex-wrap: wrap;
-    }
-
-    .head{
-        flex-direction: column-reverse;
-        gap: 2rem;
-        padding: 2rem 1rem 1rem 1rem;
-    }
-
-    .btn{
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn button, 
-    .btn a,
-    .description button{
-        width: 100%;
-    }
-
-    .btn .demo{
-        border: 1px solid var(--clr-primary);
-        color: var(--clr-primary);
-    }
-
-    .title p, 
-    .advantages-section p,
-    .description p,
-    .project p,
-    .card1 p, .card2 p, .card3 p,
-    fieldset p,
     .box1 p,
     .news p{
         font-size: .85rem;
         line-height: 24px;
     }
 
-    .card h2,
     .box1 h2,
     .news h2{
         font-size: 1.2rem;
         line-height: 25px;
-    }
-
-    .features-section{
-        padding: 5rem 1rem;
-    }
-
-    .title-direction{
-        padding: 0 1rem;
     }
 
     .subscribe-section{
@@ -1216,31 +789,6 @@ fieldset .position{
 
     .first-section img{
         width: 30%;
-    }
-
-    .blog-section button,
-    .card1, .card2, .card3,
-    .learn-more a{
-        width: 100%;
-    }
-
-    .learn-more a{
-        width: 100%;
-    }
-
-    .block1 .description{
-        padding-left: 0;
-    }
-    .block2 .description{
-        padding-right: 0;
-    }
-
-    .card{
-        width: 100%;
-    }
-
-    .advantages-card{
-        padding: 1rem;
     }
 
     .contact-us-section{
@@ -1267,7 +815,6 @@ fieldset .position{
     .clients img{
         width: 30%;
     }
-
 }
 
 @media (max-width: 400px){
@@ -1284,4 +831,3 @@ fieldset .position{
         align-items: flex-start;
     }
 }
-
