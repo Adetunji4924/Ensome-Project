@@ -134,6 +134,11 @@ li a:focus{
     margin-right: 0;
 }
 
+.header button:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
 #menu{
     font-size: 2rem;
     font-weight: 700;
@@ -228,6 +233,169 @@ li a:focus{
     color: var(--clr-tetiary);
 }
 
+/* the styling for the overview section */
+.overview-section{
+    background-color: var(--clr-background-one);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.overview-section > h1{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    margin-bottom: 1rem;
+}
+
+.numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    color: var(--clr-primary);
+}
+
+.project h1{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.project p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 700;
+    font-size: .9rem;
+    line-height: 28px;
+}
+
+.separator{
+    width: .1rem;
+    background-color: var(--clr-helperblue);
+    opacity: 0.2;
+    padding: 2.5rem 0;
+}
+
+/* The styling of the our customers section */
+.our-customer{
+    padding: 3rem 5rem;
+}
+
+.our-customer h1{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+}
+
+.our-customer p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+}
+
+.clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The styling of the review part starts from here */
+.review-section{
+    padding: 5rem 1rem;
+}
+
+.title-direction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+}
+
+.title-direction h1{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+}
+
+.direction{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.direction .material-symbols-outlined{
+    padding: .3rem 1.5rem;
+    background-color: var(--clr-secondary);
+    border-radius: 10px;
+}
+
+#back{
+    opacity: 0.6;
+}
+
+.reviews-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+fieldset{
+    border: none;
+    box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);
+    border-radius: 6px;
+    padding: 2rem 1.5rem;
+}
+
+fieldset p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    margin-bottom: 1rem;
+}
+
+fieldset #name{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: .9rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    margin-bottom: .2rem;
+}
+
+fieldset .position{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+}
 
 /* The styling for the contact us section */
 .contact-us-section{
@@ -565,6 +733,10 @@ li a:focus{
     .who-we-are-section{
         flex-direction: column-reverse;
     }
+
+    .clients{
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 900px){
@@ -691,8 +863,15 @@ li a:focus{
         font-size: .8rem;
     }
 
-    .project h1{
+    .project h1, 
+    .overview-section > h1,
+    .title-direction h1{
         font-size: 2rem;
+    }
+
+    .numbers{
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     .overview-section{
@@ -718,8 +897,24 @@ li a:focus{
         width: 100%;
     }
 
+    .description h1,
+    .our-customer h1,
+    .title-direction h1{
+        font-size: 2rem;
+    }
+
+    .description p,
+    .our-customer p,
+    fieldset p{
+        font-size: .8rem;
+    }
+
     .description h1, .description p{
         text-align: center;
+    }
+
+    .our-customer{
+        padding: 2rem 1rem;
     }
 
 
@@ -738,7 +933,8 @@ li a:focus{
     .subscribe-section,
     .first-section,
     .second-section,
-    .third-section{
+    .third-section,
+    .reviews-cards{
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -751,7 +947,9 @@ li a:focus{
         width: 100%;
     }
 
-    .project h1{
+    .project h1,
+    .our-customer h1,
+    .title-direction h1{
         font-size: 1.5rem;
         line-height: 30px;
     }
@@ -766,6 +964,10 @@ li a:focus{
     .news h2{
         font-size: 1.2rem;
         line-height: 25px;
+    }
+
+    .title-direction{
+        padding: 0 1rem;
     }
 
     .subscribe-section{
@@ -798,6 +1000,11 @@ li a:focus{
     .direction .material-symbols-outlined{
         padding: .3rem 1rem;
     } 
+
+    .description h1,
+    .overview-section > h1{
+        font-size: 1.5rem;
+    }
 
 
     .text-field{
