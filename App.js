@@ -1,3 +1,4 @@
+// function for the harmburger menu
 let toggle = document.querySelector('.harmburger');
 let body = document.querySelector('body');
 
@@ -12,4 +13,4 @@ let acc = document.getElementsByClassName("accordion");
         acc[i].addEventListener("click", function() {
             this.classList.toggle("active");
         })
-    }
+    };

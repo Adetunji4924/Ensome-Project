@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+
+:root{
+    /* colors */
+    --clr-white: #FFFFFF;
+    --clr-black: rgba(41, 45, 51, 1);
+    --clr-primary: rgba(24, 92, 255, 1);
+    --clr-secondary: rgba(240, 249, 255, 1);
+    --clr-tetiary: rgba(148, 151, 161, 1);
+    --clr-background-one: rgba(241, 246, 250, 1);
+    --clr-error: rgba(193, 64, 64, 1);
+    --clr-helperblue: rgba(201, 220, 236, 1);
+
+    /* Fonts */
+    --ff-heading: 'Manrope';
+    --ff-content: 'Open Sans'
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 16px;
+    background-color: var(--clr-white);
+}
+
+/* The design of the hero section starts from here */
+/* the header */
+.hero-section{
+    background-color: var(--clr-background-one);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+#logo2, .follow{
+    display: none;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+li a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: var(--clr-tetiary);
+    font-family: var(--ff-heading);
+}
+
+li a:hover{
+    color: var(--clr-black);
+    transition: 0.3s;
+}
+
+li a:focus{
+    color: var(--clr-black);
+}
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn{
+    background-color: var(--clr-background-one);
+    border: none;
+    color: var(--clr-tetiary);
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown:hover .dropbtn{
+    color: var(--clr-black);
+    transition: 0.3s;
+    opacity: 20;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: var(--clr-primary);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: var(--clr-white);
+    text-decoration: none;
+    padding: .2rem 2rem;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-primary);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: 0.3s;
+  }
+
+.header button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: var(--clr-white);
+    font-family: var(--ff-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: var(--clr-primary);
+    border: none;
+    padding: .5rem .5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 0;
+}
+
+.header button:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+#menu{
+    font-size: 2rem;
+    font-weight: 700;
+    /* color: var(--clr-primary); */
+    display: none;
+    cursor: pointer;
+}
+
+#close{
+    font-size: 2rem;
+    color: var(--clr-white);
+    display: none;
+    cursor: pointer;
+}
+
+.harmburger{
+    display: none;
+}
+
+/* The head part of the hero section */
+.head{
+    padding: 5rem 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title h1{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: -0.015em;
+}
+
+.segment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.segment .home, .segment p{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 500;
+    font-size: .8rem;
+    line-height: 24px;
+    color: var(--clr-tetiary);
+}
+
+.segment p{
+    color: var(--clr-black);
+    font-weight: 600;
+}
+
+.line{
+    height: 1rem;
+    width: .1rem;
+    background-color: var(--clr-tetiary);
+}
+
+/* The styling of the blog starts from here */
+.blog-section{
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.article-section{
+    max-width: 60%;
+}
+
+.date-author{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.date-author .date,
+.date-author .author{
+    display: flex;
+    gap: .5rem;
+}
+
+.date-author p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+}
+
+.date-author i{
+    color: var(--clr-tetiary);
+}
+
+.article-head{
+    max-width: 70%;
+}
+
+.article-head p{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+}
+
+.article-content{
+    max-width: 90%;
+}
+
+.article-content p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+}
+
+.quote{
+    display: flex;
+    gap: 2rem;
+    padding-left: 4rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.quote p{
+    color: var(--clr-black);
+}
+
+.quote-line{
+    padding: 2rem .1rem;
+    background-color: var(--clr-primary);
+}
+
+/* The styling for the related post under blog section */
+.related-post{
+    padding-top: 2rem;
+}
+
+.related-post h3{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+}
+
+.post{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.content .date{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    padding-bottom: .5rem;
+}
+
+.content .post-head{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    padding-bottom: .5rem;
+}
+
+.content .post-head:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.content .text{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    padding-bottom: .5rem;
+}
+
+/* This is the styling of the side bar section */
+.search{
+    width: 100%;
+    display: flex;
+}
+
+#search-bar{
+    width: 70%;
+    height: 2rem;
+    padding: 0 1rem;
+    border-radius: 7px 0 0 7px;
+    border: 1px solid var(--clr-tetiary);
+    font: var(--ff-content);
+}
+
+#search-button{
+    width: 30%;
+    border-radius: 0 7px 7px 0;
+    border: none;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    cursor: pointer;
+    font: var(--ff-content);
+    font-weight: 500;
+}
+
+.sidebar-section h3{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    padding: 1rem 0;
+}
+
+.popular-posts .post{
+    display: flex;
+    gap: 1rem;
+}
+
+.post-content .date{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: var(--clr-tetiary);
+    padding-bottom: .5rem;
+}
+
+.post-content .post-head{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    padding-bottom: .5rem;
+}
+
+.post-content a{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 600;
+    font-size: .8rem;
+    line-height: 24px;
+    color: var(--clr-primary);
+}
