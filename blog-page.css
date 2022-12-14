@@ -421,3 +421,85 @@ li a:focus{
     line-height: 24px;
     color: var(--clr-primary);
 }
+
+/* This is the styling of the categories part of the blog page */
+.categories{
+    padding: 2rem 0;
+}
+
+.categories h4{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    padding-bottom: 1rem;
+}
+
+.categories-title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--clr-tetiary);
+    padding: 1rem 0;
+}
+
+.categories-title p{
+    font-family: var(--ff-content);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    cursor: pointer;
+}
+
+.categories-title i{
+    color: var(--clr-black);
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.tags h4{
+    font-family: var(--ff-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: var(--clr-black);
+    padding-bottom: 1rem;
+}
+
+.tags-link{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.tags-link .active{
+    padding: .3rem .5rem;
+    color: var(--clr-white);
+    background-color: var(--clr-primary);
+    border-radius: 5px;
+    font-size: .8rem;
+    font-family: var(--ff-heading);
+    font-weight: 800;
+}
+
+.tags-link a{
+    padding: .3rem .5rem;
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-helperblue);
+    border-radius: 5px;
+    font-size: .8rem;
+    font-family: var(--ff-heading);
+    font-weight: 800;
+}
+
+.tags-link a:hover{
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    transition: 0.3s;
+}
