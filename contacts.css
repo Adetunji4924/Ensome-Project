@@ -271,6 +271,7 @@ li a:focus{
     outline: none;
     background-color: var(--clr-white);
     border-bottom: 1px solid var(--clr-tetiary);
+    padding: 1rem .5rem;
 }
 
 .form label{
