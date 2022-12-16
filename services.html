@@ -152,17 +152,18 @@
     </div>
     <div class="form">
         <p>Contact Us</p>
-        <form action="contact us">
+        <form action="contact us" onsubmit="sendEmail(); reset(); return false;">
             <label for="name">Name</label><br />
-            <input type="text" name="name" id="name"><br />
+            <input type="text" name="name" id="name" required><br />
             <label for="email">Email</label><br />
-            <input type="email" name="email" id="email"><br />
+            <input type="email" name="email" id="email" required><br />
             <label for="theme">Theme</label><br />
-            <input type="text" name="theme" id="theme"><br />
+            <input type="text" name="theme" id="theme" required><br />
             <label for="message">Message</label><br />
-            <input type="text" name="message" id="message">
+            <input type="text" name="message" id="message" required>
+            <input type="submit" value="Send">
         </form>
-        <input type="submit" value="Send">
+        <!-- <input type="submit" value="Send"> -->
     </div>
 </div>
 
@@ -243,5 +244,6 @@
 </div>
 
    <script src="App.js"></script>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
