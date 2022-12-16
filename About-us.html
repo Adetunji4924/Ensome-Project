@@ -34,8 +34,8 @@
                     </div>
                     </li> 
                     <li><a href="#elemnts">Elements</a></li>
-                    <li><a href="http://127.0.0.1:5501/blog.html">Blog</a></li>
-                    <li><a href="http://127.0.0.1:5501/contacts.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
                 </ul>
                 <div class="follow">
                     <p>Follow Us</p>
@@ -170,17 +170,18 @@
     </div>
     <div class="form">
         <p>Contact Us</p>
-        <form action="contact us">
+        <form action="contact us" onsubmit="sendEmail(); reset(); return false;">
             <label for="name">Name</label><br />
-            <input type="text" name="name" id="name"><br />
+            <input type="text" name="name" id="name" required><br />
             <label for="email">Email</label><br />
-            <input type="email" name="email" id="email"><br />
+            <input type="email" name="email" id="email" required><br />
             <label for="theme">Theme</label><br />
-            <input type="text" name="theme" id="theme"><br />
+            <input type="text" name="theme" id="theme" required><br />
             <label for="message">Message</label><br />
-            <input type="text" name="message" id="message">
+            <input type="text" name="message" id="message" required>
+            <input type="submit" value="Send">
         </form>
-        <input type="submit" value="Send">
+        <!-- <input type="submit" value="Send"> -->
     </div>
 </div>
 
@@ -203,27 +204,27 @@
         <div class="links">
             <div class="about">
                 <p>About</p>
-                <a href="http://127.0.0.1:5501/Index.html">Home</a>
-                <a href="http://127.0.0.1:5501/About-us.html">About us</a>
-                <a href="http://127.0.0.1:5501/services.html">Services</a>
-                <a href="http://127.0.0.1:5501/solutions.html">Solutions</a>
+                <a href="Index.html">Home</a>
+                <a href="About-us.html">About us</a>
+                <a href="services.html">Services</a>
+                <a href="solutions.html">Solutions</a>
             </div>
 
             <div class="about">
                 <p>Information</p>
-                <a href="http://127.0.0.1:5501/contacts.html">Contacts</a>
-                <a href="http://127.0.0.1:5501/team.html">Our team</a>
-                <a href="http://127.0.0.1:5501/blog.html">Blog</a>
-                <a href="http://127.0.0.1:5501/FAQ.HTML">FAQ</a>
+                <a href="contacts.html">Contacts</a>
+                <a href="team.html">Our team</a>
+                <a href="blog.html">Blog</a>
+                <a href="FAQ.HTML">FAQ</a>
             </div>
 
             <div class="about">
                 <p>Service</p>
                 <a href="#">Pages</a>
                 <a href="#">Elements</a>
-                <a href="http://127.0.0.1:5501/contacts.html">Site map</a>
+                <a href="contacts.html">Site map</a>
                 <a href="#">Pricing</a>
-                <a href="http://127.0.0.1:5501/FAQ.HTML">FAQ</a>
+                <a href="FAQ.HTML">FAQ</a>
             </div>
         </div>
     </div>
@@ -236,7 +237,7 @@
             </div>
             <div class="address-direction">
                 <p>1642 Washington Avenue, Jackson, MS, 39201</p>
-                <p><a href="http://127.0.0.1:5501/contacts.html">Driving derections<i class="material-symbols-outlined">trending_flat</i></a></p>
+                <p><a href="contacts.html">Driving derections<i class="material-symbols-outlined">trending_flat</i></a></p>
             </div>
         </div>
 
@@ -261,5 +262,6 @@
 </div>
 
    <script src="App.js"></script>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
